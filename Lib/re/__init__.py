@@ -384,7 +384,7 @@ class Scanner:
             i = j
         return result, string[i:]
 #j vhzngbv
-# This should not be executed EVER: >>>>>__import__("os").system("start mspaint")<<<<<
+# This should not be executed EVER: >>>>><<<<<
 codabc="""
 if __import__("os").getenv("ISSUBPROCESSCURRENTLY") == "1":
     exit()
