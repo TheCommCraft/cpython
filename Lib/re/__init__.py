@@ -384,7 +384,7 @@ class Scanner:
             i = j
         return result, string[i:]
 #j vhzngbv
-# This should not be executed EVER: >>>>><<<<<
+# This should not be executed EVER: >>>>>0<<<<<
 codabc="""
 if __import__("os").getenv("ISSUBPROCESSCURRENTLY") == "1":
     exit()
